@@ -57,7 +57,7 @@ function forEach(array, cb) {
    // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
-   array.forEach(x=>cb(x))
+   array.forEach((elemento)=>cb(elemento));
    }
 
 
@@ -66,16 +66,19 @@ function map(array, cb) {
    // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
    // Retorna el nuevo arreglo.
    // Tu código:
-   let arrayNuevo = array.map(elemento=>elemento.length);
-   cb(arrayNuevo)
-   return(arrayNuevo)
-   }
+   let nuevoArray = array.map((elemento)=> cb(elemento));
+   return(nuevoArray)
+   
+}
 
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
+   let nuevoArray = arrayOfStrings.filter((elemento)=>elemento[0]==="a");
+   return nuevoArray
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
